@@ -1,4 +1,4 @@
-package pl.learning.numberToWords;
+package pl.learning.numberToWords.daroVersion;
 
 public class NumberToWords {
     public static void main (String[] args){
