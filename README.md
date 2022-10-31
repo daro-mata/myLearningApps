@@ -1,1 +1,1 @@
-Hej Kornel, dzięki wielkie za pomoc. Liczę, że się nie zrazisz moim brakiem wiedzy ;P kiedyś będzie lepiej <3
+# This is my readme file
