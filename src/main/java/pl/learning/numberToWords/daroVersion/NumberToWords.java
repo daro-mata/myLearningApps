@@ -1,20 +1,20 @@
 package pl.learning.numberToWords.daroVersion;
 
 public class NumberToWords {
-    public static void main (String[] args){
+    public static void main(String[] args) {
         numberToWords(1950);
     }
 
-    public static void numberToWords (int number){
-        int n=number;
-        int count=getDigitCount(number);
+    public static void numberToWords(int number) {
+        int n = number;
+        int count = getDigitCount(number);
         number = reverse(number);
-        int reverseCount=getDigitCount(number);
+        int reverseCount = getDigitCount(number);
 
-        if(number<0){
+        if (number < 0) {
             System.out.println("Invalid Value");
-        } else if (number<10){
-            switch(number){
+        } else if (number < 10) {
+            switch (number) {
                 case 0:
                     System.out.print("Zero ");
                     break;
@@ -48,11 +48,11 @@ public class NumberToWords {
                 default:
                     break;
             }
-        } else if (number>=10){
+        } else if (number >= 10) {
             int lastDigit;
-            while(number!=0){
-                lastDigit=number%10;
-                switch(lastDigit){
+            while (number != 0) {
+                lastDigit = number % 10;
+                switch (lastDigit) {
                     case 0:
                         System.out.print("Zero ");
                         break;
@@ -86,10 +86,10 @@ public class NumberToWords {
                     default:
                         break;
                 }
-                number/=10;
-                if(number<10){
-                    lastDigit=number;
-                    switch(lastDigit){
+                number /= 10;
+                if (number < 10) {
+                    lastDigit = number;
+                    switch (lastDigit) {
                         case 0:
                             System.out.print("Zero ");
                             break;
@@ -123,61 +123,64 @@ public class NumberToWords {
                         default:
                             break;
                     }
-                    number=0;
+                    number = 0;
                 }
             }
         }
 
-        if (reverseCount<count){
-            count-=reverseCount;
-            while(count>0){
+        if (reverseCount < count) {
+            count -= reverseCount;
+            while (count > 0) {
                 System.out.print("Zero ");
                 count--;
             }
         }
     }
-    public static int reverse (int number){
-        int lastDigit=0;
-        int reversedNumber=0;
 
-        if (number<10 && number>=0){
-            reversedNumber=number;
-        } else if(number>-10 && number<0){
-            reversedNumber=number;
-        } else if(number>0){
-            while(number>0){
-                lastDigit=number%10;
-                reversedNumber+=lastDigit;
-                reversedNumber*=10;
-                number/=10;
-                if(number<10){
-                    reversedNumber+=number;
-                    number=0;
+    public static int reverse(int number) {
+        int lastDigit = 0;
+        int reversedNumber = 0;
+
+        if (number < 10 && number >= 0) {
+            reversedNumber = number;
+        } else if (number > -10 && number < 0) {
+            reversedNumber = number;
+        } else if (number > 0) {
+            while (number > 0) {
+                lastDigit = number % 10;
+                reversedNumber += lastDigit;
+                reversedNumber *= 10;
+                number /= 10;
+                if (number < 10) {
+                    reversedNumber += number;
+                    number = 0;
                 }
             }
-        } else if(number<0){
-            while(number<0){
-                lastDigit=number%10;
-                reversedNumber+=lastDigit;
-                reversedNumber*=10;
-                number/=10;
-                if(number>-10){
-                    reversedNumber+=number;
-                    number=0;
+        } else if (number < 0) {
+            while (number < 0) {
+                lastDigit = number % 10;
+                reversedNumber += lastDigit;
+                reversedNumber *= 10;
+                number /= 10;
+                if (number > -10) {
+                    reversedNumber += number;
+                    number = 0;
                 }
             }
         }
         return reversedNumber;
     }
-    public static int getDigitCount (int number){
-        if (number<0){
+
+    public static int getDigitCount(int number) {
+        if (number < 0) {
             return -1;
         } else {
-            int count=1;
-            while(number>9){
-                number/=10;
+            int count = 1;
+            while (number > 9) {
+                number /= 10;
                 count++;
-            } return count;
+            }
+            return count;
         }
     }
 }
