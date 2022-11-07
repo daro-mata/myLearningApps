@@ -2,6 +2,12 @@ package pl.learning.bankAccount;
 
 public class Account {
 
+    private String number;
+    private double balance;
+    private String name;
+    private String email;
+    private String phoneNumber;
+
     public Account(String number, double balance, String name, String email, String phoneNumber) {
         this.number = number;
         this.balance = balance;
@@ -9,27 +15,6 @@ public class Account {
         this.email = email;
         this.phoneNumber = phoneNumber;
     }
-
-    public static void main(String[] args) {
-        Account daro = new Account("12312312312", 25239, "Daro", "daro@gmail.com", "123 456 789");
-
-        System.out.println(daro.getName());
-        System.out.println(daro.getNumber());
-        System.out.println(daro.getBalance());
-        System.out.println(daro.getEmail());
-        System.out.println(daro.getPhoneNumber());
-
-        daro.withdrawFunds(3574);
-        daro.depositFunds(912);
-
-    }
-
-    private String number;
-    private double balance;
-    private String name;
-    private String email;
-    private String phoneNumber;
-
 
     public void setNumber(String number) {
         this.number = number;
