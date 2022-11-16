@@ -3,7 +3,7 @@ package pl.learning.paintJob;
 public class PaintJob {
     public static void main(String[] args) {
         System.out.println(getBucketCount
-                (3.26,0.75));
+                (3.26, 0.75));
     }
 
     public static int getBucketCount(double width, double height, double areaPerBucket, int extraBuckets) {

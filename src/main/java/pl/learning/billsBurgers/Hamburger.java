@@ -73,7 +73,7 @@ class Hamburger {
         }
     }
 
-    public void pay(){
+    public void pay() {
         System.out.println("Your order cost " + price() + "$.");
     }
 

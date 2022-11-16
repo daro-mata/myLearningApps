@@ -1,6 +1,6 @@
 package pl.learning.vehicleChallenge;
 
-public class Car extends Vehicle{
+public class Car extends Vehicle {
 
     private int wheels;
     private int doors;
@@ -22,7 +22,7 @@ public class Car extends Vehicle{
         System.out.println("Car.changeGear(): Changed to " + this.currentGear + " gear.");
     }
 
-    public void changeVelocity(int speed, int direction){
+    public void changeVelocity(int speed, int direction) {
         move(speed, direction);
         System.out.println("Car.changeVelocity() : Velocity " + speed + " direction " + direction);
     }

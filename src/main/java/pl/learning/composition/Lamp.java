@@ -5,25 +5,25 @@ public class Lamp {
     private boolean battery;
     private int globRating;
 
-    public Lamp(String style, boolean battery, int globRating){
+    public Lamp(String style, boolean battery, int globRating) {
         this.style = style;
         this.battery = battery;
         this.globRating = globRating;
     }
 
-    public void turnOn(){
+    public void turnOn() {
         System.out.println("Lamp -> turning on.");
     }
 
-    public String getStyle(){
+    public String getStyle() {
         return this.style;
     }
 
-    public boolean isBattery(){
+    public boolean isBattery() {
         return this.battery;
     }
 
-    public int getGlobRating(){
+    public int getGlobRating() {
         return this.globRating;
     }
 }

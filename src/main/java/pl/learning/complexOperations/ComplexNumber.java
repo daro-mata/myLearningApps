@@ -2,6 +2,13 @@ package pl.learning.complexOperations;
 
 public class ComplexNumber {
 
+    private double real, imaginary;
+
+    public ComplexNumber(double real, double imaginary) {
+        this.real = real;
+        this.imaginary = imaginary;
+    }
+
     public static void main(String[] args) {
         ComplexNumber one = new ComplexNumber(1.0, 1.0);
         ComplexNumber number = new ComplexNumber(2.5, -1.5);
@@ -14,13 +21,6 @@ public class ComplexNumber {
         number.subtract(one);
         System.out.println("number.real= " + number.getReal());
         System.out.println("number.imaginary= " + number.getImaginary());
-    }
-
-    private double real, imaginary;
-
-    public ComplexNumber(double real, double imaginary) {
-        this.real = real;
-        this.imaginary = imaginary;
     }
 
     public double getReal() {
@@ -50,7 +50,6 @@ public class ComplexNumber {
         this.real -= parameter.real;
         this.imaginary -= parameter.imaginary;
     }
-
 
 
 }
