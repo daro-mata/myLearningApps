@@ -7,7 +7,7 @@ public class Vehicle {
     private int currentVelocity;
     private int currentDirection;
 
-    public Vehicle (String name, String size){
+    public Vehicle(String name, String size) {
         this.name = name;
         this.size = size;
 
@@ -15,12 +15,12 @@ public class Vehicle {
         this.currentDirection = 0;
     }
 
-    public void steer(int direction){
+    public void steer(int direction) {
         this.currentDirection += direction;
         System.out.println("Vehicle.steer() : Steering at " + currentDirection + " degrees.");
     }
 
-    public void move(int velocity, int direction){
+    public void move(int velocity, int direction) {
         currentVelocity = velocity;
         currentDirection = direction;
         System.out.println("Vehicle.move() : Moving at " + currentVelocity + " in direction " + currentDirection);
@@ -58,7 +58,7 @@ public class Vehicle {
         this.currentDirection = currentDirection;
     }
 
-    public void stop(){
+    public void stop() {
         this.currentVelocity = 0;
         System.out.println("Vehicle is not moving now.");
     }

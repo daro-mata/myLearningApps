@@ -2,6 +2,17 @@ package pl.learning.printer;
 
 public class Printer {
 
+    private double tonerLevel;
+    private int printedPages;
+    private boolean duplexPrinter;
+    public Printer(double tonerLevel, boolean duplexPrinter) {
+        if (tonerLevel > 0 && tonerLevel <= 100) {
+            this.tonerLevel = tonerLevel;
+        }
+        this.printedPages = 0;
+        this.duplexPrinter = duplexPrinter;
+    }
+
     public static void main(String[] args) {
         Printer printer = new Printer(29, false);
 
@@ -14,18 +25,6 @@ public class Printer {
         System.out.println("");
         printer.fillUpToner();
         printer.printerInfo();
-    }
-
-    private double tonerLevel;
-    private int printedPages;
-    private boolean duplexPrinter;
-
-    public Printer(double tonerLevel, boolean duplexPrinter) {
-        if (tonerLevel > 0 && tonerLevel <= 100) {
-            this.tonerLevel = tonerLevel;
-        }
-        this.printedPages = 0;
-        this.duplexPrinter = duplexPrinter;
     }
 
     public double getTonerLevel() {

@@ -17,7 +17,7 @@ public class HealthyBurger extends Hamburger {
 
         //additional additions
         price += this.cheese * 2;
-        if(isBarbecueSos()){
+        if (isBarbecueSos()) {
             price += 1;
         }
         return price;

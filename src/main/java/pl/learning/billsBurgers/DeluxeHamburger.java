@@ -18,7 +18,7 @@ public class DeluxeHamburger extends Hamburger {
         price += super.price();
 
         //additional additions
-        if(isChipsAndDrinks()){
+        if (isChipsAndDrinks()) {
             price += 12;
         }
         return price;
@@ -27,7 +27,7 @@ public class DeluxeHamburger extends Hamburger {
     @Override
     public void order() {
         super.order();
-        if (isChipsAndDrinks()){
+        if (isChipsAndDrinks()) {
             System.out.println("- chips and drinks.");
         }
     }
